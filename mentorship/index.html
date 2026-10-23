@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mentorship | Ryan Spoon</title>
+<meta name="description" content="Group mentorship and one-on-one coaching for worship, creative, and tech leaders, from Ryan Spoon: 20+ years leading teams at churches from 100 to 5,000.">
+<link rel="canonical" href="https://ryanspoonworship.com/mentorship/">
+<meta property="og:title" content="Mentorship | Ryan Spoon">
+<meta property="og:description" content="Group mentorship and one-on-one coaching for worship, creative, and tech leaders, from Ryan Spoon: 20+ years leading teams at churches from 100 to 5,000.">
+<meta property="og:image" content="https://ryanspoonworship.com/assets/ryan-portrait.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#1E3A23; --moss:#2F5233; --cream:#EAE0CC; --linen:#F4EBDC; --ivory:#FAF6EF;
+    --gold:#C9A227; --espresso:#271A13; --bark:#272415; --olive:#6E6949; --butter:#FFF8DF;
+    --charcoal:#282829; --orange:#FF8200;
+    --sans:"Albert Sans",sans-serif;
+    --serif:"Playfair Display","Freight Big Pro",Georgia,serif;
+    --wrap:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--cream);background:var(--forest);font-size:18px;line-height:1.45;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+  section{padding:104px 0}
+  .eyebrow{font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  .serif{font-family:var(--serif);font-weight:700;line-height:.98;letter-spacing:-.01em}
+  .btn{display:inline-block;font-family:var(--sans);font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:17px 34px;border-radius:999px;border:0;cursor:pointer;transition:transform .15s ease,opacity .15s ease;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px);opacity:.92}
+  .btn-gold{background:var(--gold);color:var(--espresso)}
+  .btn-dark{background:var(--bark);color:var(--butter)}
+  .btn-ghost{border:1px solid rgba(234,224,204,.55);color:var(--cream);background:transparent}
+  .ph{display:inline-block;font-size:.78em;font-weight:500;letter-spacing:.02em;color:var(--orange);border:1px dashed currentColor;border-radius:6px;padding:1px 8px;background:rgba(255,130,0,.07);white-space:nowrap}
+  .btn .ph{color:inherit;margin-left:6px;font-size:.8em}
+  .head{text-align:center;max-width:800px;margin:0 auto 56px}
+  .head h2{font-size:clamp(40px,5vw,62px);margin:14px 0 20px}
+  .head p{font-size:20px;line-height:1.38}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(30,58,35,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(234,224,204,.08)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  nav .brand{font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+  nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+  nav ul a{font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--cream);opacity:.85}
+  nav ul a:hover,nav ul a[aria-current]{opacity:1;color:var(--gold)}
+  nav ul a.navbtn{opacity:1;background:var(--gold);color:var(--espresso);padding:10px 18px;border-radius:999px;font-weight:500}
+
+  /* hero */
+  .hero{padding:84px 0 96px;overflow:hidden}
+  .hero .grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+  .hero h1{font-weight:400;text-transform:uppercase;font-size:clamp(38px,4.6vw,64px);line-height:1.02;color:var(--linen);margin:20px 0 0}
+  .hero h1 span{display:block;color:var(--gold)}
+  .hero .lead{max-width:600px;margin:26px 0 34px;font-size:21px;line-height:1.38}
+  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .cred{display:flex;align-items:center;gap:16px;margin-top:40px;padding-top:28px;border-top:1px solid rgba(234,224,204,.16);max-width:600px}
+  .hero .cred img{width:58px;height:58px;border-radius:50%;object-fit:cover;object-position:52% 22%;border:2px solid var(--gold)}
+  .hero .cred p{font-size:15.5px;line-height:1.4;opacity:.92}
+  .hero .cred b{color:var(--linen);font-weight:500}
+  .stack{position:relative;height:540px}
+  .stack img{position:absolute;width:62%;box-shadow:0 30px 60px rgba(0,0,0,.38),0 6px 16px rgba(0,0,0,.25)}
+  .stack .back{right:0;top:0;transform:rotate(4deg)}
+  .stack .front{left:4%;top:56px;transform:rotate(-4deg)}
+  .stack .chip{position:absolute;left:0;bottom:8px;background:var(--gold);color:var(--espresso);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:9px 16px;border-radius:999px}
+
+  /* stats band */
+  .band{background:var(--moss);padding:30px 0}
+  .band .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .band .num{font-family:var(--serif);font-size:34px;font-weight:700;color:var(--linen);line-height:1}
+  .band span{display:block;margin-top:6px;font-family:var(--sans);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--cream);opacity:.85}
+
+  /* kits */
+  .kits{background:var(--cream);color:var(--bark)}
+  .kits .head h2{color:var(--moss)}
+  .kits .head p{color:var(--espresso)}
+  .kits .eyebrow{color:var(--moss)}
+  .product{display:grid;grid-template-columns:380px 1fr;gap:56px;background:var(--ivory);padding:52px;margin-bottom:32px;position:relative}
+  .product .cover img{width:100%;box-shadow:0 22px 44px rgba(39,26,19,.28)}
+  .product .badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:var(--bark);padding:7px 14px;border-radius:999px}
+  .product .badge.green{background:var(--moss);color:var(--butter)}
+  .product h3{font-family:var(--serif);font-size:44px;line-height:1.02;margin:16px 0 10px;color:var(--bark)}
+  .product .stat{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:16px}
+  .product .desc{color:var(--olive);font-size:18px;line-height:1.5;margin-bottom:26px;max-width:640px}
+  .inside{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin-bottom:26px}
+  .inside div{padding:13px 0;border-top:1px solid rgba(39,36,21,.12)}
+  .inside b{display:flex;justify-content:space-between;gap:10px;font-size:16px;color:var(--bark)}
+  .inside b em{font-style:normal;font-weight:500;color:var(--moss);white-space:nowrap}
+  .inside small{display:block;font-size:14px;line-height:1.4;color:var(--olive);margin-top:3px}
+  .extras{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+  .extras span{font-size:13.5px;color:var(--moss);background:rgba(47,82,51,.08);border:1px solid rgba(47,82,51,.18);padding:6px 12px;border-radius:999px}
+  .buy{display:flex;align-items:center;gap:22px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(39,36,21,.12)}
+  .buy .price{font-size:44px;letter-spacing:-.02em;line-height:1;color:var(--bark)}
+  .buy .price .ph{font-size:16px;letter-spacing:0;vertical-align:middle}
+  .buy .meta{font-size:14px;color:var(--olive)}
+  .waitform{display:flex;gap:10px;flex:1;min-width:300px;max-width:520px}
+  .waitform input{flex:1;min-width:0;font:inherit;font-size:16px;padding:15px 22px;border-radius:999px;border:1px solid rgba(39,36,21,.25);background:#fff;color:var(--bark)}
+  .formnote{width:100%;font-size:13px;color:var(--olive)}
+  .starter{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center;background:var(--forest);color:var(--cream);padding:48px 52px}
+  .starter h3{font-family:var(--serif);font-size:38px;line-height:1.05;margin:14px 0 10px;color:var(--linen)}
+  .starter .stat{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:12px}
+  .starter p{font-size:17px;opacity:.92}
+  .kits .starter .eyebrow{color:var(--gold)}
+  .starter .waitform input{border-color:rgba(234,224,204,.35)}
+  .starter .formnote{color:rgba(234,224,204,.7)}
+
+  /* how it works */
+  .how{background:var(--forest)}
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;counter-reset:s}
+  .step{border-top:2px solid var(--gold);padding-top:22px}
+  .step .n{font-family:var(--serif);font-size:44px;color:var(--gold);line-height:1;font-weight:700}
+  .step h3{font-size:18px;font-weight:700;color:var(--linen);margin:14px 0 8px}
+  .step p{font-size:15.5px;line-height:1.45;opacity:.88}
+  .tools{text-align:center;margin-top:46px;font-size:16px;opacity:.85}
+
+  /* verify */
+  .verify{background:var(--moss)}
+  .verify .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+  .verify h2{font-size:clamp(40px,4.6vw,58px);margin:14px 0 20px}
+  .verify .rule{margin-top:28px;font-family:var(--serif);font-size:30px;color:var(--gold);font-style:italic}
+  .checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+  .checks li{padding:15px 0 15px 36px;border-top:1px solid rgba(234,224,204,.16);position:relative;font-size:15.5px;line-height:1.4}
+  .checks li:before{content:"";position:absolute;left:0;top:17px;width:18px;height:18px;border:1.5px solid var(--gold);border-radius:4px}
+  .checks li:after{content:"";position:absolute;left:6px;top:20px;width:5px;height:10px;border:solid var(--gold);border-width:0 2px 2px 0;transform:rotate(45deg)}
+  .checks b{display:block;color:var(--linen);font-weight:700;font-size:16px}
+
+  /* workshops */
+  .workshops-wrap{background:var(--forest);padding:96px 0}
+  .workshops{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;border:1px solid rgba(201,162,39,.45);padding:38px 44px}
+  .workshops img{width:160px;height:160px;object-fit:cover;filter:grayscale(1)}
+  .workshops h3{font-family:var(--serif);font-size:34px;margin-bottom:10px;color:var(--linen)}
+  .workshops p{font-size:17px;opacity:.92;max-width:620px}
+
+  /* about */
+  .about{background:var(--cream);color:var(--espresso);padding:96px 0}
+  .about .grid{display:grid;grid-template-columns:360px 1fr;gap:64px;align-items:center}
+  .about .pic img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .about small{display:block;font-size:14px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--moss)}
+  .about h2{font-family:var(--serif);font-weight:400;text-transform:uppercase;font-size:44px;letter-spacing:.02em;color:var(--moss);margin:4px 0 22px}
+  .about p{font-size:18px;line-height:1.55;margin-bottom:16px}
+
+  /* mentorship (compact) */
+  .mentor{background:var(--ivory);color:var(--bark);padding:64px 0;border-top:1px solid rgba(39,36,21,.08)}
+  .mentor .wrap{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+  .mentor .eyebrow{color:var(--moss)}
+  .mentor h2{font-family:var(--serif);font-size:36px;margin:10px 0 10px;color:var(--bark)}
+  .mentor p{font-size:17px;color:var(--olive);max-width:720px}
+  .mentor p a{color:var(--moss);font-weight:500}
+
+  /* contact */
+  .contact{background:var(--forest);text-align:center;padding:96px 0}
+  .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(44px,5vw,64px);color:var(--linen)}
+  .contact p{font-size:22px;margin:16px 0 30px}
+  .contact .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .contact .alt{margin-top:26px;font-size:16px;opacity:.85}
+
+  footer{background:var(--forest);padding:30px 0;font-size:14px;color:rgba(234,224,204,.7);border-top:1px solid rgba(234,224,204,.1)}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer a{text-decoration:none;color:var(--gold)}
+
+  @media (max-width:1020px){
+    .product{grid-template-columns:280px 1fr;gap:40px;padding:40px}
+    .steps{grid-template-columns:repeat(3,1fr);row-gap:34px}
+  }
+  @media (max-width:900px){
+    section{padding:76px 0}
+    nav .wrap{flex-wrap:wrap;height:auto;padding-top:14px;padding-bottom:12px;row-gap:10px}
+    nav ul{width:100%;gap:0;justify-content:space-between;overflow-x:auto;scrollbar-width:none}
+    nav ul li.cta{display:none}
+    nav ul a{font-size:11.5px;letter-spacing:.1em;white-space:nowrap}
+    .hero{padding:56px 0 72px}
+    .hero .grid,.verify .grid,.about .grid,.starter,.mentor .wrap{grid-template-columns:1fr}
+    .stack{height:auto;aspect-ratio:1/0.92;max-width:520px;margin:10px auto 0;width:100%}
+    .product{grid-template-columns:1fr;padding:34px 28px}
+    .product .cover{max-width:300px}
+    .workshops{grid-template-columns:1fr;padding:30px}
+    .workshops img{display:none}
+    .about .pic{max-width:340px}
+    .steps{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:560px){
+    body{font-size:17px}
+    .wrap{padding:0 20px}
+    .hero .lead{font-size:19px}
+    .inside,.checks{grid-template-columns:1fr}
+    .product h3{font-size:36px}
+    .starter{padding:36px 26px}
+    .waitform{flex-direction:column;min-width:0}
+    .steps{grid-template-columns:1fr}
+    .band .wrap{display:grid;grid-template-columns:1fr 1fr}
+    .band .num{font-size:28px}
+    .btn{padding:16px 26px}
+    .contact p{font-size:19px}
+  }
+
+  /* ---- page-specific ---- */
+  .phero{padding:80px 0 0;text-align:center}
+  .phero .wrap{max-width:1320px}
+  .phero h1{font-weight:400;text-transform:uppercase;font-size:clamp(32px,4.2vw,60px);line-height:1.02;color:var(--linen);margin:20px 0 0}
+  .phero h1 span{display:block;color:var(--gold)}
+  .phero .lead{max-width:780px;margin:26px auto 34px;font-size:21px;line-height:1.38}
+  .phero .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .phero .photo{margin:60px auto 0;max-width:1040px;aspect-ratio:16/8.4;overflow:hidden}
+  .phero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+  @media (max-width:900px){.phero .photo{aspect-ratio:4/5}.phero .photo img{object-position:55% 30%}}
+  @media (max-width:560px){.phero{padding-top:52px}.phero .lead{font-size:19px}}
+
+  .intro{background:var(--forest);padding:72px 0 104px}
+  .intro .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .intro p{font-size:21px;line-height:1.45;margin-bottom:20px}
+  .intro img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .expect{background:var(--cream);color:var(--espresso)}
+  .expect h2{font-family:var(--serif);font-weight:700;font-size:clamp(42px,5vw,58px);color:var(--espresso);margin-bottom:44px}
+  .exp{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+  .exp div{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:28px 0;border-top:1px solid rgba(39,26,19,.16)}
+  .exp b{font-family:var(--serif);font-size:36px;color:var(--moss);line-height:1}
+  .exp p{font-size:19px;line-height:1.45}
+  .pricing{background:var(--moss)}
+  .tiers{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1000px;margin:0 auto}
+  .tier{background:var(--cream);color:var(--bark);padding:46px 44px;display:flex;flex-direction:column;position:relative}
+  .tier.alt{background:var(--ivory)}
+  .tier .badge{position:absolute;top:22px;right:22px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:var(--bark);padding:6px 12px;border-radius:999px}
+  .tier h3{font-size:15px;font-weight:500;letter-spacing:.04em}
+  .tier .price{font-size:64px;letter-spacing:-.02em;line-height:1;margin:14px 0 22px}
+  .tier .price small{font-size:22px;letter-spacing:0}
+  .tier ul{list-style:none;color:var(--olive);font-size:17px;line-height:1.38;flex:1}
+  .tier li{padding:13px 0;border-top:1px solid rgba(39,36,21,.12)}
+  .tier li b{color:var(--bark)}
+  .tier .limit{font-style:italic;color:var(--olive);font-size:16px;margin:18px 0 26px}
+  .tier .btn{align-self:flex-start}
+  .gift{background:var(--cream);color:var(--charcoal)}
+  .gift .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+  .gift img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .gift h2{font-size:60px;font-weight:500;line-height:1}
+  .gift .sub{font-size:33px;font-weight:300;font-style:italic;margin:10px 0 26px}
+  .gift .sub em{color:var(--orange)}
+  .gift h3{font-size:28px;font-weight:500;margin-bottom:14px}
+  .gift p{font-size:19px;font-weight:300;line-height:1.5;margin-bottom:16px}
+  .gift .btn{background:var(--charcoal);color:#fff;margin-top:10px;white-space:normal}
+  .faqnote{background:var(--forest);padding:0}
+  @media (max-width:900px){
+    .intro .grid,.exp,.tiers,.gift .grid{grid-template-columns:1fr}
+    .intro img{max-width:420px}
+    .tier{padding:38px 28px}
+    .gift img{max-width:380px}
+  }
+  @media (max-width:560px){.intro p{font-size:18.5px}.exp p{font-size:17.5px}.tier .price{font-size:54px}.gift h2{font-size:46px}.gift .sub{font-size:27px}}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="../">Ryan Spoon</a>
+    <ul>
+      <li><a href="../">Home</a></li>
+      <li><a href="../#kits">Kits</a></li>
+      <li><a href="../mentorship/" aria-current="page">Mentorship</a></li>
+      <li><a href="../about/">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="cta"><a class="navbtn" href="../#kits">Shop the kits</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="phero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">Ryan Spoon</div>
+    <h1>Worship, Creative &amp; Tech Leader<span>Mentorship</span></h1>
+    <p class="lead">For worship, creative, and tech ministers who want a room of peers who get it, or personal coaching in their corner.</p>
+    <div class="ctas">
+      <a class="btn btn-gold" href="#pricing">See the options</a>
+      <a class="btn btn-ghost" href="https://calendly.com/ryanspoonworship/discovery">Book a call</a>
+    </div>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap grid">
+    <div>
+      <p>Nobody trained you for the hard conversations. The team drama. The challenge of getting creatives, musicians, and tech volunteers and staff all moving in the same direction. It's possible you were trained to do some things, but not to navigate the stuff that actually keeps you up at night.</p>
+      <p>That's where I come in. After 20+ years leading worship, creative, and tech teams at churches from 100 to 5,000, I walk leaders through the stuff nobody trains you for.</p>
+      <a class="btn btn-gold" href="https://becomingministries.myflodesk.com/r6mop1jxmh/checkout" style="margin-top:10px">Sign up now</a>
+    </div>
+    <img src="../assets/ryan-stage.jpg" alt="Ryan Spoon on stage with a worship team">
+  </div>
+</section>
+
+<section class="expect">
+  <div class="wrap">
+    <h2>What to expect:</h2>
+    <div class="exp">
+      <div><b>01</b><p>A weekly 75-minute live group call where we work through hard conversations, team health, and leading creatives, including live mentorship on real situations you're facing right now</p></div>
+      <div><b>02</b><p>A private group chat for questions, wins, and encouragement between calls. You'll never carry a hard week alone</p></div>
+      <div><b>03</b><p>A room of peers who actually get your world: worship, creative, and tech ministers walking the same road</p></div>
+      <div><b>04</b><p>Practical tools you can use that week: conversation scripts, team health frameworks, and the stuff nobody trains you for</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="serif">Ready to get started?</h2>
+      <p>Leading a worship, creative, or tech ministry can feel like the loneliest job in the building, but it doesn't have to be. Whether you want a weekly room of peers who get it or personal coaching in your corner, there's a path here for your season. Let's get started.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <span class="badge">Most popular</span>
+        <h3>The Cohort</h3>
+        <div class="price">$150<small>/mo</small></div>
+        <ul>
+          <li><b>Weekly 75-minute group call</b> (evenings, via Zoom): practical teaching on hard conversations, team health, and leading creatives, plus live coaching on real situations members are facing right now</li>
+          <li><b>Private group chat</b> for questions, wins, and encouragement between calls</li>
+          <li><b>A room of peers who understand your world</b>, because this role can be one of the loneliest in the church</li>
+        </ul>
+        <p class="limit">Limited to 10 members so every voice gets heard.</p>
+        <a class="btn btn-dark" href="https://becomingministries.myflodesk.com/r6mop1jxmh/checkout?frequency=monthly">Join now</a>
+      </div>
+      <div class="tier alt">
+        <h3>The Inner Circle</h3>
+        <div class="price">$350<small>/mo</small></div>
+        <ul>
+          <li>Everything in The Cohort, plus <b>personal mentoring</b> on your specific situation</li>
+          <li><b>Two private 60-minute sessions per month</b>: your team, your challenges, your growth, one-on-one</li>
+          <li><b>Priority access between sessions</b>: when the hard conversation is happening <em>this Thursday</em>, you can reach me</li>
+          <li><b>Session notes and action steps</b> after every private call</li>
+        </ul>
+        <p class="limit">Limited to 4 Inner Circle spots.</p>
+        <a class="btn btn-dark" href="https://becomingministries.myflodesk.com/r6mop1jxmh/checkout">Join now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gift" id="guide">
+  <div class="wrap grid">
+    <img src="../assets/hard-conversation-guide.jpg" alt="The Hard Conversation Guide on a wooden table" loading="lazy">
+    <div>
+      <h2>Not sure yet?</h2>
+      <div class="sub">A <em>free</em> gift for you</div>
+      <h3>The Hard Conversation Guide</h3>
+      <p>If there's a name that came to mind the moment you saw the title of this guide, that's the conversation this is about. You already know it needs to happen. <em>Nobody trained you for it.</em></p>
+      <p>That's what this guide is for. One truth up front: the conversation you're avoiding is already happening. Your team feels the tension. The person in question usually senses it too. Avoiding it doesn't keep the peace. It just makes you the only one pretending things are fine. Let's get you ready.</p>
+      <a class="btn" href="https://becomingministries.myflodesk.com/">Download here <span class="ph" style="color:#FFB15C">[CONFIRM GUIDE LINK]</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Have questions?</h2>
+    <p>Let's set up a time to chat.</p>
+    <div class="ctas">
+      <a class="btn btn-gold" href="https://calendly.com/ryanspoonworship/discovery">Book a call</a>
+      <a class="btn btn-ghost" href="#">Email me <span class="ph">[PUBLIC EMAIL]</span></a>
+    </div>
+    <p class="alt">Follow along: <span class="ph">[INSTAGRAM / YOUTUBE LINKS]</span></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Ryan Spoon</span>
+    <span><a href="../">Home</a> · <a href="../#kits">Kits</a> · <a href="../mentorship/">Mentorship</a> · <a href="../about/">About</a> · <a href="https://calendly.com/ryanspoonworship/discovery">Book a call</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

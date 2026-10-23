@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Ryan Spoon | Worship, Creative &amp; Tech Leader</title>
+<meta name="description" content="Ryan Spoon has 20+ years leading worship, creative, and tech teams at churches from 100 to 5,000 across Florida and Tennessee, and serves as Executive Pastor of Creative Arts.">
+<link rel="canonical" href="https://ryanspoonworship.com/about/">
+<meta property="og:title" content="About Ryan Spoon | Worship, Creative &amp; Tech Leader">
+<meta property="og:description" content="Ryan Spoon has 20+ years leading worship, creative, and tech teams at churches from 100 to 5,000 across Florida and Tennessee, and serves as Executive Pastor of Creative Arts.">
+<meta property="og:image" content="https://ryanspoonworship.com/assets/ryan-portrait.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#1E3A23; --moss:#2F5233; --cream:#EAE0CC; --linen:#F4EBDC; --ivory:#FAF6EF;
+    --gold:#C9A227; --espresso:#271A13; --bark:#272415; --olive:#6E6949; --butter:#FFF8DF;
+    --charcoal:#282829; --orange:#FF8200;
+    --sans:"Albert Sans",sans-serif;
+    --serif:"Playfair Display","Freight Big Pro",Georgia,serif;
+    --wrap:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--cream);background:var(--forest);font-size:18px;line-height:1.45;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+  section{padding:104px 0}
+  .eyebrow{font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  .serif{font-family:var(--serif);font-weight:700;line-height:.98;letter-spacing:-.01em}
+  .btn{display:inline-block;font-family:var(--sans);font-size:14px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:17px 34px;border-radius:999px;border:0;cursor:pointer;transition:transform .15s ease,opacity .15s ease;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px);opacity:.92}
+  .btn-gold{background:var(--gold);color:var(--espresso)}
+  .btn-dark{background:var(--bark);color:var(--butter)}
+  .btn-ghost{border:1px solid rgba(234,224,204,.55);color:var(--cream);background:transparent}
+  .ph{display:inline-block;font-size:.78em;font-weight:500;letter-spacing:.02em;color:var(--orange);border:1px dashed currentColor;border-radius:6px;padding:1px 8px;background:rgba(255,130,0,.07);white-space:nowrap}
+  .btn .ph{color:inherit;margin-left:6px;font-size:.8em}
+  .head{text-align:center;max-width:800px;margin:0 auto 56px}
+  .head h2{font-size:clamp(40px,5vw,62px);margin:14px 0 20px}
+  .head p{font-size:20px;line-height:1.38}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(30,58,35,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(234,224,204,.08)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  nav .brand{font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+  nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+  nav ul a{font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--cream);opacity:.85}
+  nav ul a:hover,nav ul a[aria-current]{opacity:1;color:var(--gold)}
+  nav ul a.navbtn{opacity:1;background:var(--gold);color:var(--espresso);padding:10px 18px;border-radius:999px;font-weight:500}
+
+  /* hero */
+  .hero{padding:84px 0 96px;overflow:hidden}
+  .hero .grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+  .hero h1{font-weight:400;text-transform:uppercase;font-size:clamp(38px,4.6vw,64px);line-height:1.02;color:var(--linen);margin:20px 0 0}
+  .hero h1 span{display:block;color:var(--gold)}
+  .hero .lead{max-width:600px;margin:26px 0 34px;font-size:21px;line-height:1.38}
+  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .cred{display:flex;align-items:center;gap:16px;margin-top:40px;padding-top:28px;border-top:1px solid rgba(234,224,204,.16);max-width:600px}
+  .hero .cred img{width:58px;height:58px;border-radius:50%;object-fit:cover;object-position:52% 22%;border:2px solid var(--gold)}
+  .hero .cred p{font-size:15.5px;line-height:1.4;opacity:.92}
+  .hero .cred b{color:var(--linen);font-weight:500}
+  .stack{position:relative;height:540px}
+  .stack img{position:absolute;width:62%;box-shadow:0 30px 60px rgba(0,0,0,.38),0 6px 16px rgba(0,0,0,.25)}
+  .stack .back{right:0;top:0;transform:rotate(4deg)}
+  .stack .front{left:4%;top:56px;transform:rotate(-4deg)}
+  .stack .chip{position:absolute;left:0;bottom:8px;background:var(--gold);color:var(--espresso);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:9px 16px;border-radius:999px}
+
+  /* stats band */
+  .band{background:var(--moss);padding:30px 0}
+  .band .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .band .num{font-family:var(--serif);font-size:34px;font-weight:700;color:var(--linen);line-height:1}
+  .band span{display:block;margin-top:6px;font-family:var(--sans);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--cream);opacity:.85}
+
+  /* kits */
+  .kits{background:var(--cream);color:var(--bark)}
+  .kits .head h2{color:var(--moss)}
+  .kits .head p{color:var(--espresso)}
+  .kits .eyebrow{color:var(--moss)}
+  .product{display:grid;grid-template-columns:380px 1fr;gap:56px;background:var(--ivory);padding:52px;margin-bottom:32px;position:relative}
+  .product .cover img{width:100%;box-shadow:0 22px 44px rgba(39,26,19,.28)}
+  .product .badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:var(--bark);padding:7px 14px;border-radius:999px}
+  .product .badge.green{background:var(--moss);color:var(--butter)}
+  .product h3{font-family:var(--serif);font-size:44px;line-height:1.02;margin:16px 0 10px;color:var(--bark)}
+  .product .stat{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:16px}
+  .product .desc{color:var(--olive);font-size:18px;line-height:1.5;margin-bottom:26px;max-width:640px}
+  .inside{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin-bottom:26px}
+  .inside div{padding:13px 0;border-top:1px solid rgba(39,36,21,.12)}
+  .inside b{display:flex;justify-content:space-between;gap:10px;font-size:16px;color:var(--bark)}
+  .inside b em{font-style:normal;font-weight:500;color:var(--moss);white-space:nowrap}
+  .inside small{display:block;font-size:14px;line-height:1.4;color:var(--olive);margin-top:3px}
+  .extras{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+  .extras span{font-size:13.5px;color:var(--moss);background:rgba(47,82,51,.08);border:1px solid rgba(47,82,51,.18);padding:6px 12px;border-radius:999px}
+  .buy{display:flex;align-items:center;gap:22px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(39,36,21,.12)}
+  .buy .price{font-size:44px;letter-spacing:-.02em;line-height:1;color:var(--bark)}
+  .buy .price .ph{font-size:16px;letter-spacing:0;vertical-align:middle}
+  .buy .meta{font-size:14px;color:var(--olive)}
+  .waitform{display:flex;gap:10px;flex:1;min-width:300px;max-width:520px}
+  .waitform input{flex:1;min-width:0;font:inherit;font-size:16px;padding:15px 22px;border-radius:999px;border:1px solid rgba(39,36,21,.25);background:#fff;color:var(--bark)}
+  .formnote{width:100%;font-size:13px;color:var(--olive)}
+  .starter{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center;background:var(--forest);color:var(--cream);padding:48px 52px}
+  .starter h3{font-family:var(--serif);font-size:38px;line-height:1.05;margin:14px 0 10px;color:var(--linen)}
+  .starter .stat{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:12px}
+  .starter p{font-size:17px;opacity:.92}
+  .kits .starter .eyebrow{color:var(--gold)}
+  .starter .waitform input{border-color:rgba(234,224,204,.35)}
+  .starter .formnote{color:rgba(234,224,204,.7)}
+
+  /* how it works */
+  .how{background:var(--forest)}
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;counter-reset:s}
+  .step{border-top:2px solid var(--gold);padding-top:22px}
+  .step .n{font-family:var(--serif);font-size:44px;color:var(--gold);line-height:1;font-weight:700}
+  .step h3{font-size:18px;font-weight:700;color:var(--linen);margin:14px 0 8px}
+  .step p{font-size:15.5px;line-height:1.45;opacity:.88}
+  .tools{text-align:center;margin-top:46px;font-size:16px;opacity:.85}
+
+  /* verify */
+  .verify{background:var(--moss)}
+  .verify .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+  .verify h2{font-size:clamp(40px,4.6vw,58px);margin:14px 0 20px}
+  .verify .rule{margin-top:28px;font-family:var(--serif);font-size:30px;color:var(--gold);font-style:italic}
+  .checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+  .checks li{padding:15px 0 15px 36px;border-top:1px solid rgba(234,224,204,.16);position:relative;font-size:15.5px;line-height:1.4}
+  .checks li:before{content:"";position:absolute;left:0;top:17px;width:18px;height:18px;border:1.5px solid var(--gold);border-radius:4px}
+  .checks li:after{content:"";position:absolute;left:6px;top:20px;width:5px;height:10px;border:solid var(--gold);border-width:0 2px 2px 0;transform:rotate(45deg)}
+  .checks b{display:block;color:var(--linen);font-weight:700;font-size:16px}
+
+  /* workshops */
+  .workshops-wrap{background:var(--forest);padding:96px 0}
+  .workshops{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;border:1px solid rgba(201,162,39,.45);padding:38px 44px}
+  .workshops img{width:160px;height:160px;object-fit:cover;filter:grayscale(1)}
+  .workshops h3{font-family:var(--serif);font-size:34px;margin-bottom:10px;color:var(--linen)}
+  .workshops p{font-size:17px;opacity:.92;max-width:620px}
+
+  /* about */
+  .about{background:var(--cream);color:var(--espresso);padding:96px 0}
+  .about .grid{display:grid;grid-template-columns:360px 1fr;gap:64px;align-items:center}
+  .about .pic img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .about small{display:block;font-size:14px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--moss)}
+  .about h2{font-family:var(--serif);font-weight:400;text-transform:uppercase;font-size:44px;letter-spacing:.02em;color:var(--moss);margin:4px 0 22px}
+  .about p{font-size:18px;line-height:1.55;margin-bottom:16px}
+
+  /* mentorship (compact) */
+  .mentor{background:var(--ivory);color:var(--bark);padding:64px 0;border-top:1px solid rgba(39,36,21,.08)}
+  .mentor .wrap{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+  .mentor .eyebrow{color:var(--moss)}
+  .mentor h2{font-family:var(--serif);font-size:36px;margin:10px 0 10px;color:var(--bark)}
+  .mentor p{font-size:17px;color:var(--olive);max-width:720px}
+  .mentor p a{color:var(--moss);font-weight:500}
+
+  /* contact */
+  .contact{background:var(--forest);text-align:center;padding:96px 0}
+  .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(44px,5vw,64px);color:var(--linen)}
+  .contact p{font-size:22px;margin:16px 0 30px}
+  .contact .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .contact .alt{margin-top:26px;font-size:16px;opacity:.85}
+
+  footer{background:var(--forest);padding:30px 0;font-size:14px;color:rgba(234,224,204,.7);border-top:1px solid rgba(234,224,204,.1)}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer a{text-decoration:none;color:var(--gold)}
+
+  @media (max-width:1020px){
+    .product{grid-template-columns:280px 1fr;gap:40px;padding:40px}
+    .steps{grid-template-columns:repeat(3,1fr);row-gap:34px}
+  }
+  @media (max-width:900px){
+    section{padding:76px 0}
+    nav .wrap{flex-wrap:wrap;height:auto;padding-top:14px;padding-bottom:12px;row-gap:10px}
+    nav ul{width:100%;gap:0;justify-content:space-between;overflow-x:auto;scrollbar-width:none}
+    nav ul li.cta{display:none}
+    nav ul a{font-size:11.5px;letter-spacing:.1em;white-space:nowrap}
+    .hero{padding:56px 0 72px}
+    .hero .grid,.verify .grid,.about .grid,.starter,.mentor .wrap{grid-template-columns:1fr}
+    .stack{height:auto;aspect-ratio:1/0.92;max-width:520px;margin:10px auto 0;width:100%}
+    .product{grid-template-columns:1fr;padding:34px 28px}
+    .product .cover{max-width:300px}
+    .workshops{grid-template-columns:1fr;padding:30px}
+    .workshops img{display:none}
+    .about .pic{max-width:340px}
+    .steps{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:560px){
+    body{font-size:17px}
+    .wrap{padding:0 20px}
+    .hero .lead{font-size:19px}
+    .inside,.checks{grid-template-columns:1fr}
+    .product h3{font-size:36px}
+    .starter{padding:36px 26px}
+    .waitform{flex-direction:column;min-width:0}
+    .steps{grid-template-columns:1fr}
+    .band .wrap{display:grid;grid-template-columns:1fr 1fr}
+    .band .num{font-size:28px}
+    .btn{padding:16px 26px}
+    .contact p{font-size:19px}
+  }
+
+  /* ---- page-specific ---- */
+  .phero{padding:80px 0 0;text-align:center}
+  .phero .wrap{max-width:1320px}
+  .phero h1{font-weight:400;text-transform:uppercase;font-size:clamp(32px,4.2vw,60px);line-height:1.02;color:var(--linen);margin:20px 0 0}
+  .phero h1 span{display:block;color:var(--gold)}
+  .phero .lead{max-width:780px;margin:26px auto 34px;font-size:21px;line-height:1.38}
+  .phero .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .phero .photo{margin:60px auto 0;max-width:1040px;aspect-ratio:16/8.4;overflow:hidden}
+  .phero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+  @media (max-width:900px){.phero .photo{aspect-ratio:4/5}.phero .photo img{object-position:55% 30%}}
+  @media (max-width:560px){.phero{padding-top:52px}.phero .lead{font-size:19px}}
+
+  .story{background:var(--cream);color:var(--espresso)}
+  .story .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:start}
+  .story small{display:block;font-size:14px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--moss)}
+  .story h2{font-family:var(--serif);font-weight:400;text-transform:uppercase;font-size:48px;letter-spacing:.02em;color:var(--moss);margin:4px 0 26px}
+  .story p{font-size:19px;line-height:1.6;margin-bottom:20px}
+  .story .pull{font-family:var(--serif);font-style:italic;font-size:28px;line-height:1.3;color:var(--moss);border-left:3px solid var(--gold);padding-left:24px;margin:34px 0}
+  .story .pics{display:grid;gap:18px}
+  .story .pics img{width:100%;object-fit:cover}
+  .story .pics .tall{aspect-ratio:4/5}
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:8px}
+  .facts div{border-top:2px solid var(--gold);padding-top:18px}
+  .facts b{display:block;font-family:var(--serif);font-size:38px;color:var(--linen);line-height:1;white-space:nowrap}
+  .facts span{font-size:13px;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+  .band2{background:var(--moss);padding:72px 0}
+  .now{background:var(--forest)}
+  .now .cards{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .now .card{background:var(--ivory);color:var(--bark);padding:44px;display:flex;flex-direction:column}
+  .now .card.alt{background:var(--cream)}
+  .now .card .tag{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--moss)}
+  .now .card h3{font-family:var(--serif);font-size:36px;line-height:1.05;margin:12px 0 14px}
+  .now .card p{color:var(--olive);font-size:17px;line-height:1.5;margin-bottom:14px;flex:1}
+  .now .card .btn{align-self:flex-start;margin-top:10px}
+  .home{background:var(--cream);color:var(--espresso)}
+  .home .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+  .home img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .home h2{font-family:var(--serif);font-size:48px;color:var(--moss);margin:12px 0 18px;line-height:1}
+  .home .eyebrow{color:var(--moss)}
+  .home p{font-size:19px;line-height:1.6}
+  @media (max-width:900px){
+    .story .grid,.now .cards,.home .grid{grid-template-columns:1fr}
+    .story .grid{gap:40px}
+    .story .pics{grid-template-columns:1fr 1fr}
+    .story .pics .tall{aspect-ratio:3/4}
+    .facts{grid-template-columns:1fr 1fr;row-gap:30px}
+    .now .card{padding:34px 28px}
+  }
+  @media (max-width:560px){.facts b{font-size:30px}.story p,.home p{font-size:17.5px}.story .pull{font-size:23px}}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="../">Ryan Spoon</a>
+    <ul>
+      <li><a href="../">Home</a></li>
+      <li><a href="../#kits">Kits</a></li>
+      <li><a href="../mentorship/">Mentorship</a></li>
+      <li><a href="../about/" aria-current="page">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="cta"><a class="navbtn" href="../#kits">Shop the kits</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="phero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">About Ryan Spoon</div>
+    <h1>Worship, Creative &amp; Tech Leader<span>Executive Pastor of Creative Arts</span></h1>
+    <p class="lead">After 20+ years leading worship, creative, and tech teams at churches from 100 to 5,000, I walk leaders through the stuff nobody trains you for, and I help church creative teams adopt AI with confidence.</p>
+  </div>
+  <div class="photo"><img src="../assets/ryan-portrait.jpg" alt="Ryan Spoon smiling in a warmly lit room"></div>
+</header>
+
+<section class="story" id="story">
+  <div class="wrap grid">
+    <div>
+      <small>A little</small>
+      <h2>About me</h2>
+      <p>Ministry has been a big part of my life for more than 20 years. I've led worship, creative, and tech teams at churches from 100 to 5,000 across Florida and Tennessee, growing from worship leader to my current role as Executive Pastor of Creative Arts.</p>
+      <p>But I've also lived the parts of ministry nobody talks about from the stage. I've been let go. I've served under leadership that wounded instead of built. I've stepped away and found my way home again. Those seasons are the reason I coach today.</p>
+      <p class="pull">Nobody trained you for the hard conversations. That's where I come in.</p>
+      <p>Leading a worship, creative, or tech ministry can feel like the loneliest job in the building, but it doesn't have to be. It's possible you were trained to do some things, but not to navigate the stuff that actually keeps you up at night: the team drama, and getting creatives, musicians, and tech volunteers and staff all moving in the same direction.</p>
+      <p>I also use AI every day as a church pastor and creative, and I test every prompt in my kits myself. The goal isn't to replace your people. It's to give them back time for the work only people can do.</p>
+    </div>
+    <div class="pics">
+      <img class="tall" src="../assets/ryan-worship.jpg" alt="Ryan Spoon leading worship" loading="lazy">
+      <img class="tall" src="../assets/ryan-stage.jpg" alt="Ryan Spoon on stage with a worship team" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<div class="band2">
+  <div class="wrap facts">
+    <div><b>20+</b><span>Years in ministry</span></div>
+    <div><b>100–5,000</b><span>Church sizes led</span></div>
+    <div><b>FL &amp; TN</b><span>Where I've served</span></div>
+    <div><b>Tampa</b><span>Home today</span></div>
+  </div>
+</div>
+
+<section class="now" id="now">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">What I do now</div>
+      <h2 class="serif">Two ways I can help</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">Church Creative AI Kits</span>
+        <h3>Help for your creative team</h3>
+        <p>Copy-and-paste AI prompt kits for church creative and communications teams, written for ChatGPT and tested in Claude. I help teams adopt AI in a way that's practical, thoughtful, and true to who they are.</p>
+        <p>Training, workshops, and coaching for church teams, too.</p>
+        <a class="btn btn-dark" href="../#kits">See the kits</a>
+      </div>
+      <div class="card alt">
+        <span class="tag">Mentorship</span>
+        <h3>Help for you as a leader</h3>
+        <p>A weekly room of peers in The Cohort, or one-on-one coaching in The Inner Circle, for worship, creative, and tech leaders working through hard conversations, team health, and leading creatives.</p>
+        <a class="btn btn-dark" href="../mentorship/">Explore mentorship</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home" id="family">
+  <div class="wrap grid">
+    <img src="../assets/spoon-family.jpg" alt="Ryan and Lanissa Spoon with their daughter Elianna" loading="lazy">
+    <div>
+      <div class="eyebrow">Home</div>
+      <h2>Life off the stage</h2>
+      <p>Home is the Tampa area, where my wife Lanissa and I serve at our local church and are soaking up every moment with our daughter, Elianna.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:30px">
+        <a class="btn btn-dark" href="../#kits">Shop the kits</a>
+        <a class="btn btn-ghost" style="border-color:rgba(39,26,19,.35);color:var(--espresso)" href="../mentorship/">Mentorship</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Have questions?</h2>
+    <p>Let's set up a time to chat.</p>
+    <div class="ctas">
+      <a class="btn btn-gold" href="https://calendly.com/ryanspoonworship/discovery">Book a call</a>
+      <a class="btn btn-ghost" href="#">Email me <span class="ph">[PUBLIC EMAIL]</span></a>
+    </div>
+    <p class="alt">Follow along: <span class="ph">[INSTAGRAM / YOUTUBE LINKS]</span></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Ryan Spoon</span>
+    <span><a href="../">Home</a> · <a href="../#kits">Kits</a> · <a href="../mentorship/">Mentorship</a> · <a href="../about/">About</a> · <a href="https://calendly.com/ryanspoonworship/discovery">Book a call</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
