@@ -164,6 +164,18 @@
   .mentor p{font-size:17px;color:var(--olive);max-width:720px}
   .mentor p a{color:var(--moss);font-weight:500}
 
+  /* AI tools */
+  .tools-daily,.tools-media{scroll-margin-top:80px}
+  .tools-daily{background:var(--forest)}
+  .tools-media{background:var(--cream);color:var(--bark)}
+  .tools-media .head h2{color:var(--moss)}
+  .tools-media .eyebrow{color:var(--orange-deep)}
+  .tools-daily .cards,.tools-media .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .tools-daily .card,.tools-media .card{background:var(--ivory);color:var(--bark);padding:44px;display:flex;flex-direction:column}
+  .tools-daily .card h3,.tools-media .card h3{font-family:var(--serif);font-size:36px;line-height:1.05;margin:0 0 14px;color:var(--orange-deep)}
+  .tools-daily .card p,.tools-media .card p{color:var(--olive);font-size:17px;line-height:1.5;flex:1}
+  .tools-daily .card .btn,.tools-media .card .btn{align-self:flex-start;margin-top:22px;max-width:100%;white-space:normal;text-align:center}
+
   /* contact */
   .contact{background:var(--forest);text-align:center;padding:96px 0}
   .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(44px,5vw,64px);color:var(--linen)}
@@ -194,6 +206,7 @@
     .workshops img{display:none}
     .about .pic{max-width:340px}
     .steps{grid-template-columns:1fr 1fr}
+    .tools-daily .cards,.tools-media .cards{grid-template-columns:1fr}
   }
   @media (max-width:560px){
     body{font-size:17px}
@@ -208,6 +221,8 @@
     .band .num{font-size:28px}
     .btn{padding:16px 26px}
     .contact p{font-size:19px}
+    .tools-daily .card,.tools-media .card{padding:34px 28px}
+    .tools-daily .card h3,.tools-media .card h3{font-size:32px}
   }
 </style>
 </head>
@@ -219,6 +234,7 @@
     <ul>
       <li><a href="./" aria-current="page">Home</a></li>
       <li><a href="./#kits">Kits</a></li>
+      <li><a href="#tools">AI Tools</a></li>
       <li><a href="mentorship/">Mentorship</a></li>
       <li><a href="about/">About</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -343,6 +359,60 @@
   </div>
 </section>
 
+<section class="tools-daily" id="tools">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Tools I use every day</div>
+      <h2 class="serif">The AI platforms behind my work</h2>
+      <p>These are the AI tools I actually open every day for planning, writing, and meetings.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <h3>Granola</h3>
+        <p>AI meeting notes without a bot joining your call.</p>
+        <!-- TODO: replace with Ryan's Granola affiliate link once approved -->
+        <a class="btn btn-gold" href="https://www.granola.ai/" target="_blank" rel="noopener">Try Granola</a>
+      </article>
+      <article class="card">
+        <h3>Grok</h3>
+        <p>Fast answers, research, and brainstorming.</p>
+        <a class="btn btn-gold" href="https://grok.com/" target="_blank" rel="noopener">Try Grok</a>
+      </article>
+      <article class="card">
+        <h3>Claude</h3>
+        <p>My go-to for writing, editing, and building church resources.</p>
+        <a class="btn btn-gold" href="https://claude.ai/" target="_blank" rel="noopener">Sign up for a free Claude account</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="tools-media" id="media">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">What I create with</div>
+      <h2 class="serif">Tools for images, video, and sound</h2>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <h3>Higgsfield</h3>
+        <p>AI images and video for sermon series, promos, and social.</p>
+        <a class="btn btn-gold" href="https://higgsfield.ai/" target="_blank" rel="noopener">Explore Higgsfield</a>
+      </article>
+      <article class="card">
+        <h3>ElevenLabs</h3>
+        <p>Natural-sounding voiceovers and audio.</p>
+        <a class="btn btn-gold" href="https://elevenlabs.io/" target="_blank" rel="noopener">Explore ElevenLabs</a>
+      </article>
+      <article class="card">
+        <h3>Midjourney</h3>
+        <p>Striking photo-style imagery and artwork.</p>
+        <a class="btn btn-gold" href="https://www.midjourney.com/" target="_blank" rel="noopener">Explore Midjourney</a>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="how" id="how">
   <div class="wrap">
     <div class="head">
@@ -437,7 +507,7 @@
 <footer>
   <div class="wrap">
     <span>© 2026 Ryan Spoon · Planning Center is a trademark of its owner; these kits aren't affiliated with or endorsed by Planning Center.</span>
-    <span><a href="#kits">Kits</a> · <a href="mentorship/">Mentorship</a> · <a href="about/">About</a> · <a href="https://calendly.com/ryanspoonworship/discovery">Book a call</a></span>
+    <span><a href="#kits">Kits</a> · <a href="#tools">AI Tools</a> · <a href="mentorship/">Mentorship</a> · <a href="about/">About</a> · <a href="https://calendly.com/ryanspoonworship/discovery">Book a call</a></span>
   </div>
 </footer>
 
