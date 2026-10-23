@@ -11,7 +11,7 @@ CNAME                  ryanspoonworship.com
 preview-*.png          review screenshots (home, about, mentorship × desktop/mobile). Delete before publishing.
 ```
 
-Before going live, fill in or remove every orange `[PLACEHOLDER]` tag in `index.html`, `about/index.html` and `mentorship/index.html`.
+Before going live, fill in or remove every gold `[PLACEHOLDER]` tag in `index.html`, `about/index.html` and `mentorship/index.html`.
 
 ## Publish on GitHub Pages (free)
 
@@ -45,9 +45,9 @@ All links between pages are relative (`../`, `about/`, `mentorship/`), so they w
 - **Playfair Display** (Google Fonts, free) stands in for **Freight Big Pro**, the serif used on the Flodesk page. Freight Big Pro is an Adobe font and needs a license. If you have Adobe Fonts, you can add it to a web project and swap it into `--serif`.
 
 ## Prices and dates on the site (Steeple's suggested pricing)
-- **Christmas & End-of-Year Giving Kit:** on sale Thu Nov 12, 2026. Single church $19 early bird (Nov 12–15, 11:59 PM ET), then $24. Team license $49 early bird, then $59. Multi-campus $99, with no early-bird discount.
+- **Christmas & End-of-Year Giving Kit:** on sale Thu Nov 12, 2026. Single church $24. Team license is a $4 add-on per additional license. Multi-campus $99. Multi-campus option may change.
 - **Prompt Master Kit:** launches Tue Jan 19, 2027. $39 founding price through Mon Jan 25, 2027, then $49.
 - **Sunday-Week Starter Pack:** free, coming Sun Nov 15, 2026.
 - **Mentorship:** The Cohort $150/mo, The Inner Circle $350/mo.
 
-This is a static site, so prices don't change by themselves. After Sun Nov 15, edit `index.html` to drop the Christmas early-bird lines, and after Mon Jan 25, 2027 do the same for the Master Kit founding price. Keep the prices in Payhip the same as the prices on the site.
+This is a static site, so prices don't change by themselves. After Mon Jan 25, 2027, edit `index.html` to drop the Master Kit founding-price lines. Keep the prices in Payhip the same as the prices on the site.
