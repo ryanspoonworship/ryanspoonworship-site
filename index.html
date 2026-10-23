@@ -131,7 +131,7 @@
   .notify .waitform{max-width:560px}
   .notify .notify-msg{display:none;margin:12px 0 0;font-size:14.5px;color:var(--moss);font-weight:500}
   .notify .notify-msg.show{display:block}
-  .notify .notify-msg.err{color:var(--orange-deep)}
+  .notify .notify-msg.err{color:var(--gold-deep)}
   .notify .notify-msg a{color:inherit}
 
   /* how it works */
@@ -351,18 +351,13 @@
           <div class="eyebrow">Notify me</div>
           <h4>Be the first to know when it's ready.</h4>
           <p>The Master Kit opens Tuesday, January 19, 2027. Leave your email and I'll send you a short note when it's available, plus a look at what's inside before then. No spam, and you can unsubscribe anytime.</p>
-          <!-- REPLACE WITH MAILERLITE FORM ACTION
-               When the MailerLite account and form are ready:
-               1. Set action="" below to the MailerLite form action URL, and method="post".
-               2. Change the input name="email" to the field name MailerLite expects (usually fields[email]).
-               3. Delete data-placeholder="true" so the form submits for real.
-               Until then, the form stays on this page and shows a friendly "not open yet" message instead of erroring. -->
-          <form class="waitform" id="notify-form" action="#master-kit-notify" method="get" data-placeholder="true" novalidate>
-            <input type="email" name="email" placeholder="Your email" aria-label="Email address" autocomplete="email" required>
+          <form class="waitform" id="notify-form" action="https://assets.mailerlite.com/jsonp/2737464/forms/202155713723631097/subscribe" method="post" novalidate>
+            <input type="email" name="fields[email]" placeholder="Your email" aria-label="Email address" autocomplete="email" required>
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
             <button class="btn btn-dark" type="submit">Notify me</button>
           </form>
           <p class="notify-msg" id="notify-msg" role="status" aria-live="polite"></p>
-          <noscript><p class="notify-msg show">Email sign-ups open soon. Check back here, or <a href="https://calendly.com/ryanspoonworship/discovery">book a call</a> if you have questions.</p></noscript>
         </div>
         <div class="buy">
           <span class="meta"><b style="color:var(--bark)">Launching Tuesday, January 19, 2027.</b> Founding price <b style="color:var(--bark)">$39</b> through Mon, Jan 25, 2027 (11:59 PM ET), then $49.</span>
@@ -542,21 +537,58 @@
 </footer>
 
 <script>
-/* Master Kit notify-me: while the form is still a placeholder (no MailerLite action yet),
-   keep people on the page and show a friendly message instead of a broken submit. */
+/* Master Kit Notify Me: same fields and POST as the MailerLite embed (group Master Kit Notify). */
 (function(){
   var f=document.getElementById('notify-form'), m=document.getElementById('notify-msg');
   if(!f||!m) return;
+  function guid(){
+    function part(){return Math.floor(65536*(1+Math.random())).toString(16).substring(1)}
+    var g=part()+part()+'-'+part()+'-'+part()+'-'+part()+'-'+part()+part()+part();
+    try{
+      if(window.localStorage){
+        if(window.localStorage.ml_guid) return window.localStorage.ml_guid;
+        window.localStorage.ml_guid=g;
+      }
+    }catch(err){}
+    return g;
+  }
+  function show(text, err){
+    m.textContent=text;
+    m.className='notify-msg show'+(err?' err':'');
+  }
   f.addEventListener('submit',function(e){
-    var em=f.querySelector('input[type=email]'), v=(em.value||'').trim();
+    e.preventDefault();
+    var em=f.querySelector('input[name="fields[email]"]'), btn=f.querySelector('button[type=submit]');
+    var v=(em.value||'').trim();
+    em.value=v;
     if(!v || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){
-      e.preventDefault(); m.textContent='Please enter a valid email address.'; m.className='notify-msg show err'; em.focus(); return;
+      show('Please enter a valid email address.', true);
+      em.focus();
+      return;
     }
-    if(f.getAttribute('data-placeholder')==='true'){
-      e.preventDefault();
-      m.textContent="Thanks for your interest! Email sign-ups for the Master Kit are not open just yet. Please check back here soon.";
-      m.className='notify-msg show';
-    }
+    if(btn) btn.disabled=true;
+    var body=new URLSearchParams(new FormData(f));
+    body.set('ajax','1');
+    body.set('guid', guid());
+    fetch(f.action, {
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},
+      body:body.toString()
+    }).then(function(res){
+      return res.json().catch(function(){return null});
+    }).then(function(data){
+      if(data && data.success){
+        show("Thanks! You're on the list.", false);
+        em.value='';
+        return;
+      }
+      var emailErr=data && data.errors && data.errors.fields && data.errors.fields.email;
+      show(emailErr ? 'Please enter a valid email address.' : "Something went wrong, and we couldn't add you to the list. Please try again.", true);
+    }).catch(function(){
+      show("Something went wrong, and we couldn't add you to the list. Please try again.", true);
+    }).then(function(){
+      if(btn) btn.disabled=false;
+    });
   });
 })();
 </script>
