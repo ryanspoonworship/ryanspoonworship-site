@@ -121,6 +121,17 @@
   .starter .waitform input{border-color:rgba(234,224,204,.35)}
   .starter .formnote{color:rgba(234,224,204,.7)}
 
+  /* master kit notify-me */
+  .notify{background:var(--linen);border-left:4px solid var(--moss);padding:26px 28px;margin-bottom:26px}
+  .notify .eyebrow{color:var(--moss)}
+  .notify h4{font-family:var(--serif);font-size:28px;line-height:1.1;font-weight:700;color:var(--bark);margin:8px 0 8px}
+  .notify p{font-size:16px;line-height:1.5;color:var(--olive);margin-bottom:16px;max-width:600px}
+  .notify .waitform{max-width:560px}
+  .notify .notify-msg{display:none;margin:12px 0 0;font-size:14.5px;color:var(--moss);font-weight:500}
+  .notify .notify-msg.show{display:block}
+  .notify .notify-msg.err{color:var(--orange-deep)}
+  .notify .notify-msg a{color:inherit}
+
   /* how it works */
   .how{background:var(--forest)}
   .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;counter-reset:s}
@@ -251,7 +262,7 @@
       <p class="lead">Copy-and-paste AI prompt kits that help church creative and communications teams adopt AI with confidence. Your people still decide what goes out. AI just gets you past the blank page.</p>
       <div class="ctas">
         <a class="btn btn-gold" href="#kits">Shop the kits</a>
-        <a class="btn btn-ghost" href="#master-kit">Join the Master Kit waitlist</a>
+        <a class="btn btn-ghost" href="#master-kit-notify">Get notified about the Master Kit</a>
       </div>
       <div class="cred">
         <img src="assets/ryan-portrait.jpg" alt="Ryan Spoon">
@@ -329,13 +340,25 @@
           <div><b>Creative Team Assessments <em>8 prompts</em></b><small>Channel audit, brand check, volunteer pulse survey</small></div>
           <div><b>Planning Center + AI <em>10 prompts</em></b><small>Service plan notes, schedules, registrations (copy-and-paste only)</small></div>
         </div>
-        <div class="buy">
-          <form class="waitform" onsubmit="return false">
-            <input type="email" placeholder="Your email" aria-label="Email address">
-            <button class="btn btn-dark" type="submit">Join the waitlist</button>
+        <div class="notify" id="master-kit-notify">
+          <div class="eyebrow">Notify me</div>
+          <h4>Be the first to know when it's ready.</h4>
+          <p>The Master Kit opens Tuesday, January 19, 2027. Leave your email and I'll send you a short note when it's available, plus a look at what's inside before then. No spam, and you can unsubscribe anytime.</p>
+          <!-- REPLACE WITH MAILERLITE FORM ACTION
+               When the MailerLite account and form are ready:
+               1. Set action="" below to the MailerLite form action URL, and method="post".
+               2. Change the input name="email" to the field name MailerLite expects (usually fields[email]).
+               3. Delete data-placeholder="true" so the form submits for real.
+               Until then, the form stays on this page and shows a friendly "not open yet" message instead of erroring. -->
+          <form class="waitform" id="notify-form" action="#master-kit-notify" method="get" data-placeholder="true" novalidate>
+            <input type="email" name="email" placeholder="Your email" aria-label="Email address" autocomplete="email" required>
+            <button class="btn btn-dark" type="submit">Notify me</button>
           </form>
+          <p class="notify-msg" id="notify-msg" role="status" aria-live="polite"></p>
+          <noscript><p class="notify-msg show">Email sign-ups open soon. Check back here, or <a href="https://calendly.com/ryanspoonworship/discovery">book a call</a> if you have questions.</p></noscript>
+        </div>
+        <div class="buy">
           <span class="meta"><b style="color:var(--bark)">Launching Tuesday, January 19, 2027.</b> Founding price <b style="color:var(--bark)">$39</b> through Mon, Jan 25, 2027 (11:59 PM ET), then $49.</span>
-          <span class="formnote"><span class="ph">[WAITLIST FORM EMBED]</span> Replace with your email-list signup form.</span>
         </div>
       </div>
     </article>
@@ -511,5 +534,24 @@
   </div>
 </footer>
 
+<script>
+/* Master Kit notify-me: while the form is still a placeholder (no MailerLite action yet),
+   keep people on the page and show a friendly message instead of a broken submit. */
+(function(){
+  var f=document.getElementById('notify-form'), m=document.getElementById('notify-msg');
+  if(!f||!m) return;
+  f.addEventListener('submit',function(e){
+    var em=f.querySelector('input[type=email]'), v=(em.value||'').trim();
+    if(!v || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){
+      e.preventDefault(); m.textContent='Please enter a valid email address.'; m.className='notify-msg show err'; em.focus(); return;
+    }
+    if(f.getAttribute('data-placeholder')==='true'){
+      e.preventDefault();
+      m.textContent="Thanks for your interest! Email sign-ups for the Master Kit are not open just yet. Please check back here soon.";
+      m.className='notify-msg show';
+    }
+  });
+})();
+</script>
 </body>
 </html>
