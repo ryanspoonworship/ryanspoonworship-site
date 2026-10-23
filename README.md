@@ -11,7 +11,7 @@ CNAME                  ryanspoonworship.com
 preview-*.png          review screenshots (home, about, mentorship × desktop/mobile). Delete before publishing.
 ```
 
-Before going live, fill in or remove every orange `[PLACEHOLDER]` tag in `index.html`, `about/index.html` and `mentorship/index.html`.
+Before going live, fill in or remove every gold `[PLACEHOLDER]` tag in `index.html`, `about/index.html` and `mentorship/index.html`.
 
 ## Publish on GitHub Pages (free)
 
