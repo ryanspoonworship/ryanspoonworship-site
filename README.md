@@ -45,7 +45,7 @@ All links between pages are relative (`../`, `about/`, `mentorship/`), so they w
 - **Playfair Display** (Google Fonts, free) stands in for **Freight Big Pro**, the serif used on the Flodesk page. Freight Big Pro is an Adobe font and needs a license. If you have Adobe Fonts, you can add it to a web project and swap it into `--serif`.
 
 ## Prices and dates on the site (Steeple's suggested pricing)
-- **Christmas & End-of-Year Giving Kit:** on sale Thu Nov 12, 2026. Single church $24. Team license is a $4 add-on per additional license. Multi-campus $99. Multi-campus option may change.
+- **Christmas & End-of-Year Giving Kit:** on sale Mon Nov 2, 2026. Single church $24. Team license is a $4 add-on per additional license. Multi-campus $99. Multi-campus option may change.
 - **Prompt Master Kit:** launches Tue Jan 19, 2027. $39 founding price through Mon Jan 25, 2027, then $49.
 - **Sunday-Week Starter Pack:** free, coming Sun Nov 15, 2026.
 - **Mentorship:** The Cohort $150/mo, The Inner Circle $350/mo.
