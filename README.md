@@ -47,7 +47,7 @@ All links between pages are relative (`../`, `about/`, `mentorship/`), so they w
 ## Prices and dates on the site (Steeple's suggested pricing)
 - **The AI Ministry Kit: Christmas Communications and Year-End Giving Made Simple:** on sale Mon Nov 2, 2026. Single church $24. Team license is a $4 add-on per additional license. Multi-campus $99. Multi-campus option may change.
 - **Prompt Master Kit:** launches Tue Jan 19, 2027. $39 founding price through Mon Jan 25, 2027, then $49.
-- **Sunday-Week Starter Pack:** free, coming Sun Nov 15, 2026.
+- **Sunday-Week Starter Pack:** on hold. Your AI Ministry Assistant, the free guide, is live instead.
 - **Mentorship:** The Cohort $150/mo, The Inner Circle $350/mo.
 
 This is a static site, so prices don't change by themselves. After Mon Jan 25, 2027, edit `index.html` to drop the Master Kit founding-price lines. Keep the prices in Payhip the same as the prices on the site.
