@@ -6,6 +6,7 @@ Static site for GitHub Pages. Nothing here has been published.
 index.html             homepage: kits first (single file, inline CSS)
 about/index.html       About Me page  -> ryanspoonworship.com/about/
 mentorship/index.html  Mentorship page -> ryanspoonworship.com/mentorship/ (sign-ups go to Flodesk checkout)
+music/index.html       Satisfy single  -> ryanspoonworship.com/music/
 assets/                photos from the Flodesk page + kit covers (page 1 of each kit PDF)
 CNAME                  ryanspoonworship.com
 preview-*.png          review screenshots (home, about, mentorship × desktop/mobile). Delete before publishing.
