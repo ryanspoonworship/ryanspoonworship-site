@@ -136,6 +136,32 @@
   .notify .notify-msg.err{color:var(--gold-deep)}
   .notify .notify-msg a{color:inherit}
 
+  /* free guide */
+  .guide{background:var(--linen);color:var(--bark);padding:44px 0 48px;border-bottom:1px solid rgba(39,26,19,.14)}
+  .guide .grid{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:start}
+  .guide .cover picture{display:block}
+  .guide .cover img{width:100%;height:auto;border:1px solid rgba(39,26,19,.22)}
+  .guide .copy{border-top:2px solid var(--gold);padding-top:16px}
+  .guide .eyebrow{color:var(--moss)}
+  .guide h2{font-family:var(--serif);font-weight:700;font-size:clamp(30px,3.4vw,42px);line-height:1.18;letter-spacing:-.01em;color:var(--bark);margin:8px 0 12px;max-width:18em}
+  .guide .invite{font-size:18px;line-height:1.45;color:var(--bark);max-width:36rem;margin-bottom:8px}
+  .guide .lede{font-size:17px;line-height:1.5;color:var(--olive);max-width:40rem;margin-bottom:22px}
+  .guide .waitform{max-width:560px}
+  .guide .formnote{margin-top:12px;max-width:36rem;line-height:1.45}
+  .guide .msg{display:none;margin:14px 0 0;font-size:16px;color:var(--moss);font-weight:500}
+  .guide .msg.show{display:block}
+  .guide .msg.err{color:var(--gold-deep);font-size:14.5px}
+  .guide .confirm{margin-top:14px}
+  .guide .is-hidden{display:none}
+  @media (max-width:900px){
+    .guide{padding:32px 0 36px}
+    .guide .grid{grid-template-columns:1fr;gap:22px}
+    .guide .cover{max-width:200px}
+  }
+  @media (max-width:560px){
+    .guide .btn{white-space:normal;text-align:center}
+  }
+
   /* how it works */
   .how{background:var(--forest)}
   .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;counter-reset:s}
@@ -257,6 +283,32 @@
     </ul>
   </div>
 </nav>
+
+<section class="guide" id="free-guide">
+  <div class="wrap grid">
+    <div class="cover"><picture>
+      <source srcset="assets/ai-ministry-assistant-cover.webp" type="image/webp">
+      <img src="assets/ai-ministry-assistant-cover.jpg" width="1105" height="1430" alt="Cover of Your AI Ministry Assistant by Ryan Spoon. Deep green background, gold serif title, and a gold line drawing of a hand holding a pen.">
+    </picture></div>
+    <div class="copy">
+      <div class="eyebrow">Free guide</div>
+      <h2>Most of my week isn't ministry. It's keeping up.</h2>
+      <p class="invite">If that sounds like your week, this free guide is for you.</p>
+      <p class="lede">It shows how to use an AI assistant, Grok or ChatGPT, to keep up with email and Slack, get regular briefings, prep for meetings, and clean up your drives. The prompts are written so you can copy and paste them.</p>
+      <form class="waitform" id="guide-form" action="https://assets.mailerlite.com/jsonp/2737464/forms/202351171362358731/subscribe" method="post" novalidate>
+        <input type="email" name="fields[email]" placeholder="Your email" aria-label="Email address" autocomplete="email" required>
+        <input type="hidden" name="ml-submit" value="1">
+        <input type="hidden" name="anticsrf" value="true">
+        <button class="btn btn-dark" type="submit">Send me the free guide</button>
+      </form>
+      <p class="formnote" id="guide-note">Free. I'll also send occasional emails about AI for church creatives. Unsubscribe anytime.</p>
+      <p class="msg" id="guide-msg" role="status" aria-live="polite"></p>
+      <div class="confirm is-hidden" id="guide-confirm">
+        <a class="btn btn-dark" href="/assets/Your-AI-Ministry-Assistant.pdf">Download the guide (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <header class="hero" id="top">
   <div class="wrap grid">
@@ -617,6 +669,71 @@
       show(emailErr ? 'Please enter a valid email address.' : "Something went wrong, and we couldn't add you to the list. Please try again.", true);
     }).catch(function(){
       show("Something went wrong, and we couldn't add you to the list. Please try again.", true);
+    }).then(function(){
+      if(btn) btn.disabled=false;
+    });
+  });
+})();
+/* Free guide signup: same MailerLite fields and POST as the Master Kit form. */
+(function(){
+  var f=document.getElementById('guide-form'), m=document.getElementById('guide-msg'), note=document.getElementById('guide-note'), done=document.getElementById('guide-confirm');
+  if(!f||!m||!note||!done) return;
+  function guid(){
+    function part(){return Math.floor(65536*(1+Math.random())).toString(16).substring(1)}
+    var g=part()+part()+'-'+part()+'-'+part()+'-'+part()+'-'+part()+part()+part();
+    try{
+      if(window.localStorage){
+        if(window.localStorage.ml_guid) return window.localStorage.ml_guid;
+        window.localStorage.ml_guid=g;
+      }
+    }catch(err){}
+    return g;
+  }
+  function show(text, err){
+    m.textContent=text;
+    m.className='msg show'+(err?' err':'');
+  }
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var em=f.querySelector('input[name="fields[email]"]'), btn=f.querySelector('button[type=submit]');
+    var v=(em.value||'').trim();
+    em.value=v;
+    if(!v || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){
+      show('Please enter a valid email address.', true);
+      em.focus();
+      return;
+    }
+    show('', false);
+    m.className='msg';
+    if(btn) btn.disabled=true;
+    var body=new URLSearchParams(new FormData(f));
+    body.set('ajax','1');
+    body.set('guid', guid());
+    fetch(f.action, {
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded','Accept':'application/json'},
+      body:body.toString()
+    }).then(function(res){
+      return res.json().catch(function(){return null});
+    }).then(function(data){
+      if(data && data.success){
+        show('Thanks! The download is below.', false);
+        f.classList.add('is-hidden');
+        note.classList.add('is-hidden');
+        done.classList.remove('is-hidden');
+        var link=done.querySelector('a');
+        if(link) link.focus();
+        return;
+      }
+      if(data && data.fieldsToConfirm && data.fieldsToConfirm.length){
+        show('Please confirm your email address to finish signing up.', true);
+        em.focus();
+        return;
+      }
+      var emailErr=data && data.errors && data.errors.fields && data.errors.fields.email;
+      show(emailErr ? 'Please enter a valid email address.' : "Something went wrong, and we couldn't sign you up. Please try again.", true);
+    }).catch(function(){
+      show('A network problem stopped the signup. Please try again.', true);
     }).then(function(){
       if(btn) btn.disabled=false;
     });
